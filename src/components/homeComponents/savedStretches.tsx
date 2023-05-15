@@ -1,5 +1,5 @@
 import '../../stylesheets/savedStretches.scss';
-import SavedStretchDisplay from './subComponents/savedStretchDisplay';
+import SavedStretchDisplay from './subComponents/savedStretchDisplay.tsx';
 
 const SavedStretches = () => {
   return (
