@@ -1,13 +1,13 @@
-import * as types from '../actions/actionTypes';
-import * as actions from '../actions/actions.js';
-import store from '../store.js';
+// import * as types from '../actions/actionTypes.tsx';
+// import * as actions from '../actions/actions.tsx';
+// import store from '../store.tsx';
 // import component HERE
 
-const initialState = {
+// const initialState = {
     // Create initial State here
-}
+// }
 
-const stretchesReducer = (state = initialState, action) => {
+// const stretchesReducer = (state = initialState, action) => {
     // switch (action.type) {
     //     case types.//ACTION_NAME
     //         return {
@@ -18,7 +18,7 @@ const stretchesReducer = (state = initialState, action) => {
     //         return state;
     //     }
     // }
-    return state;
-}
+//     return state;
+// }
 
-export default stretchesReducer;
+// export default stretchesReducer;

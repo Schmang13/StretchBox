@@ -1,5 +1,6 @@
+import { useState } from 'react'
 import '../../stylesheets/regionSelector.scss'
-import Body from '../../assets/bodyFrontBack.jpg'
+import Body from '../../assets/bodyFrontBack.jpeg'
 
 const RegionSelector = ({value}) => {
   const [currentRegion, setCurrentRegion] = useState('');

@@ -6,6 +6,7 @@ import Login from './components/login';
 
 const App = () => {
   return (
+    <div>
     <Router>
       <Routes>
         <Route element={<PrivateRoutes/>}>
@@ -15,6 +16,8 @@ const App = () => {
         <Route path='/login' element={<Login/>} />   
       </Routes>
     </Router>
+    <h1>Testing</h1>
+    </div>
   )     
 }
 
