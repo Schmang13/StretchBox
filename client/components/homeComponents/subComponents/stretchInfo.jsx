@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../stylesheets/stretchinfo.scss';
+import '../../../stylesheets/stretchInfo.scss';
 
 
 const StretchInfo = value => {
