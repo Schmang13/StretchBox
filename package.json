@@ -4,13 +4,19 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "dev": "node ./server/server.cjs",
+    "test": "nodemon ./server/server.cjs",
+    "build": "vite build",
+    "123": "node ./server/server.cjs",
+    "preview": "vite preview",
+    "start": "concurrently \" vite \" \"nodemon ./server/server.cjs\"",
+    "production": "node ./server/server.cjs"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.5",
+    "dns": "^0.2.2",
+    "express": "^4.18.1",
+    "https": "^1.0.0",
+    "pg": "^8.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.2",
@@ -18,18 +24,23 @@
     "redux": "^4.2.0",
     "redux-devtools-extension": "^2.13.9",
     "request": "^2.88.2",
-    "sass": "^1.62.1"
+    "sass": "^1.60.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "@typescript-eslint/parser": "^5.57.1",
-    "@vitejs/plugin-react": "^4.0.0",
-    "eslint": "^8.38.0",
+    "@vitejs/plugin-react": "^3.1.0",
+    "concurrently": "^7.4.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.3.4",
-    "typescript": "^5.0.2",
-    "vite": "^4.3.2"
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "nodemon": "^2.0.20",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "url-loader": "^4.1.1",
+    "vite": "^4.2.0"
   }
 }
