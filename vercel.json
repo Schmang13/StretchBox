@@ -1,19 +1,22 @@
 {
   "version": 2,
-  "name": "my-app",
   "builds": [
     {
-      "src": "package.json",
+      "src": "./server/server.cjs",
       "use": "@vercel/node",
       "config": {
-        "buildCommand": "npm run production"
+        "maxLambdaSize": "50mb"
       }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/$1"
+      "dest": "./server/server.cjs"
     }
-  ]
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
+  

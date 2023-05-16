@@ -1,6 +1,6 @@
 const express = require('express');
 const request = require('request')
-const database = require ('./model.cjs');
+const database = require ('./server/model.cjs');
 const app = express();
 const port = 3010;
 const path = require('path');
@@ -9,9 +9,9 @@ const path = require('path');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, '../dist')));
+app.use(express.static(path.join(__dirname, './dist')));
 
-const apiController = require('./controllers/apiController.cjs')
+const apiController = require('./server/controllers/apiController.cjs')
 
 
 app.post('/api', apiController.getExercises, (req, res) => {
@@ -21,7 +21,7 @@ app.post('/api', apiController.getExercises, (req, res) => {
 
 app.get('*', (req, res) => {
   console.log('hello');
-  res.sendFile(path.join(__dirname, '../dist/index.html'));
+  res.sendFile(path.join(__dirname, './dist/index.html'));
 //  res.sendStatus(200);
 });
 
