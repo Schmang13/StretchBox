@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "./server/server.cjs",
   "scripts": {
     "dev": "node ./server/server.cjs",
     "test": "nodemon ./server/server.cjs",
