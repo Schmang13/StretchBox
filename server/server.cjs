@@ -1,17 +1,17 @@
 const express = require('express');
 const request = require('request')
-const database = require ('./server/model.cjs');
+const database = require ('./model.cjs');
 const app = express();
-const port = 3010;
+const port = process.env.PORT ||  3010;
 const path = require('path');
 
 // console.log(path.join(__dirname, '../client/dist'))
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, './dist')));
+app.use(express.static(path.join(__dirname, '../dist')));
 
-const apiController = require('./server/controllers/apiController.cjs')
+const apiController = require('./controllers/apiController.cjs')
 
 
 app.post('/api', apiController.getExercises, (req, res) => {
@@ -21,7 +21,7 @@ app.post('/api', apiController.getExercises, (req, res) => {
 
 app.get('*', (req, res) => {
   console.log('hello');
-  res.sendFile(path.join(__dirname, './dist/index.html'));
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 //  res.sendStatus(200);
 });
 
@@ -45,4 +45,3 @@ app.use((err, req, res, next) => {
 app.listen(port, function () {
  console.log('App listening on port: ' + port);
 });
-
