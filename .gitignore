@@ -22,4 +22,4 @@ dist-ssr
 *.sln
 *.sw?
 
-EXvercel.json
+package-lock.json
